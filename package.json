@@ -4,9 +4,8 @@
   "description": "write some demo to learn es6",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "variable": "parcel ./variable/variable.html",
+    "deconstruction": "parcel ./deconstruction/deconstruction.html"
   },
   "repository": {
     "type": "git",
