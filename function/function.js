@@ -120,3 +120,7 @@ const func10 = {
     b: () => console.log(this)
 };
 func10.b(); //window
+
+//vue中 
+//注意，不应该使用箭头函数来定义 method 函数 (例如 plus: () => this.a++)。
+//理由是箭头函数绑定了父级作用域的上下文，所以 this 将不会按照期望指向 Vue 实例，this.a 将是 undefined。
