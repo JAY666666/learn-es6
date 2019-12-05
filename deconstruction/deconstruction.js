@@ -96,4 +96,5 @@ console.log(fun2([1,2])); //3 fun2([x,y])相当于fun2(x,y)
 function fun3({test9=0,test10=1} = {}){
     return test9 + test10
 }
-console.log(fun3()); //1
+console.log(fun3()); //1 函数参数也可以有默认值
+
