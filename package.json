@@ -6,7 +6,8 @@
   "scripts": {
     "variable": "parcel ./variable/variable.html",
     "deconstruction": "parcel ./deconstruction/deconstruction.html",
-    "function": "parcel ./function/function.html"
+    "function": "parcel ./function/function.html",
+    "array": "parcel ./array/array.html"
   },
   "repository": {
     "type": "git",
