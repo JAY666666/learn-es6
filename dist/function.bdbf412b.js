@@ -294,6 +294,33 @@ func10.b(); //window
 //vue中 
 //注意，不应该使用箭头函数来定义 method 函数 (例如 plus: () => this.a++)。
 //理由是箭头函数绑定了父级作用域的上下文，所以 this 将不会按照期望指向 Vue 实例，this.a 将是 undefined。
+// js继承
+
+function demo() {
+  this.a = 1;
+  this.b = 2;
+}
+
+var o = new demo();
+console.log(o.a); //1
+
+demo.prototype.b = 3;
+demo.prototype.c = 4;
+console.log([o.a, o.b, o.c, o.d]); //[1,2,4]
+
+var extent = {
+  a: 2,
+  m: function m() {
+    return this.a + 2;
+  }
+};
+console.log(extent.a);
+var extent2 = Object.create(extent);
+console.log(extent2.a);
+extent2.a = 3;
+console.log(extent2.m()); //自身属性a=3
+
+console.log(extent.m()); //原型对象属性未变 a=2
 },{}],"C:/Users/Administrator/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -322,7 +349,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65268" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57027" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
